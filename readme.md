@@ -31,7 +31,7 @@ import pprint
 ## Loading the PDF
 
 ```
-ilepath="./example.pdf"
+filepath="./example.pdf"
 
 loader=PyPDFLoader(filepath)
 print(loader)
