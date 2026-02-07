@@ -12,12 +12,9 @@ print(loader)
 
 docs=loader.load()
 
-
 """ we use the RecursiveCharacterTextSplitter to maintain the context and paragraphs intact"""
 
 text_splitter=RecursiveCharacterTextSplitter(chunk_size=500,chunk_overlap=100)
-
-
 
 chunks=text_splitter.split_documents(docs)
 
@@ -27,11 +24,6 @@ for idx,chunk in enumerate(chunks):
 
 embedings=HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-texts=[chunk.page_content for chunk in chunks]
-metadata=[chunk.metadata for chunk in chunks]
-ids=[str(chunk.metadata["chunk_id"]) for chunk in chunks]
-
-vectors=embedings.embed_documents(texts)
 
 faiss_db=FAISS.from_documents(
   documents=chunks,
@@ -40,8 +32,13 @@ faiss_db=FAISS.from_documents(
 
 faiss_db.save_local("ragdata")
 
-query="How does top management demonstrate leadership and commitment to the ISMS?"
-docs=faiss_db.similarity_search_with_score(query,k=5)
+query="What are the key steps involved in the information security risk assessment process?"
+topk=3
+docs=faiss_db.similarity_search_with_score(query,k=topk)
+
+print(f"\n\nQuery :{query}")
+print(f" Top K :{topk}")
+print("\n\n")
 
 for index,(d,score) in enumerate(docs):
   print("-"*40)
