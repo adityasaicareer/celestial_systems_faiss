@@ -2,6 +2,11 @@
 
 **This code will run in both Python3.11 and Python3.14**
 
+**Steps to run the Code**
+
+* pip install -r requirements.txt
+* python3 rag_faiss.py
+
 **Libraries Required**
 
 ```
