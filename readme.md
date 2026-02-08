@@ -6,7 +6,7 @@
 * git clone https://github.com/adityasaicareer/celestial_systems_faiss.git
 * cd celestial_systems_faiss
 * pip install -r requirements.txt
-* python rag_qdrant.py
+* python rag_faiss.py
 
 **Libraries Required**
 
