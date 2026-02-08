@@ -2,6 +2,11 @@
 
 **This code will run in both Python3.11 and Python3.14**
 
+**Rationale for Faiss and all-MiniLM-L6-v2**
+
+* FAISS was Fast,Flexible and minimal System overhead give us control over indexing stratergies.
+* all-MiniLM-L6-v2 widely used in Industry and Research , Provides fast inference and low memory usage and low dimention (384) embeding
+
 **Steps to Run the Code**
 * git clone https://github.com/adityasaicareer/celestial_systems_faiss.git
 * cd celestial_systems_faiss
