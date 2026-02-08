@@ -2,10 +2,11 @@
 
 **This code will run in both Python3.11 and Python3.14**
 
-**Steps to run the Code**
-
+**Steps to Run the Code**
+* git clone https://github.com/adityasaicareer/celestial_systems_faiss.git
+* cd celestial_systems_faiss
 * pip install -r requirements.txt
-* python3 rag_faiss.py
+* python rag_qdrant.py
 
 **Libraries Required**
 
@@ -85,22 +86,22 @@ The Above Will Represents how we query the faiss database. We use the similarity
 ### Query 1: How does top management demonstrate leadership and commitment to the ISMS?
 ### TOP K=5
 
-![FAISS Output](./faiss1.png)
+![FAISS Output query 1](./faiss1.png)
 
-![FAISS Output](./faiss2.png)
+![FAISS Output query 1](./faiss2.png)
 
 ### Query 2: What are the requirements for establishing and communicating the information security policy?
 ### TOP K=5
 
-![FAISS Output](./faiss3.png)
+![FAISS Output Query 2](./faiss3.png)
 
-![FAISS Output](./faiss4.png)
+![FAISS Output Query 2](./faiss4.png)
 
-![FAISS Output](./faiss5.png)
+![FAISS Output Query 2](./faiss5.png)
 
-### Query 2: What are the key steps involved in the information security risk assessment process?
+### Query 3: What are the key steps involved in the information security risk assessment process?
 ### TOP K=3
 
-![FAISS Output](./faiss6.png)
+![FAISS Output Query 3](./faiss6.png)
 
-![FAISS Output](./faiss7.png)
+![FAISS Output Query 3](./faiss7.png)
